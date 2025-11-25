@@ -1,7 +1,6 @@
 /* 
     COMPREHENSIVE DATA FILE FOR TURKISH LEARNING
-    Includes: Alphabet, Grammar Logic, 12 Tenses, Modals, Cases, Vocabulary, and Exercises.
-    Master Verb used for Tenses: Gelmek (To Come)
+    Updated: Pronunciations added, Possessives split, Exercises added, Phrases expanded.
 */
 
 const syllabus = [
@@ -93,7 +92,7 @@ const syllabus = [
     },
 
     // ==========================================
-    // PART 2: NOUNS, PRONOUNS & LOGIC
+    // PART 2: NOUNS & PRONOUNS
     // ==========================================
     {
         type: "theory",
@@ -108,18 +107,32 @@ const syllabus = [
     },
     {
         type: "table",
-        title: "7. Pluralization (-lar / -ler)",
-        headers: ["Word", "Plural Rule", "Turkish Result"],
+        title: "7a. Pluralization Rules (-lar / -ler)",
+        description: "Look at the last vowel. Hard = lar, Soft = ler.",
+        headers: ["Word", "Plural Rule", "Turkish Result (Pronunciation)"],
         rows: [
-            ["Car (Araba)", "Ends in 'a' (Hard) -> add lar", "Arabalar (गाड़ियाँ)"],
-            ["House (Ev)", "Ends in 'e' (Soft) -> add ler", "Evler (घर - बहुवचन)"],
-            ["Day (Gün)", "Ends in 'ü' (Soft) -> add ler", "Günler (दिन - बहुवचन)"],
-            ["Friend (Arkadaş)", "Ends in 'a' (Hard) -> add lar", "Arkadaşlar (मित्रों)"]
+            ["Car (Araba)", "Ends in 'a' (Hard) -> add lar", "Arabalar (अराबलार)"],
+            ["House (Ev)", "Ends in 'e' (Soft) -> add ler", "Evler (एवलेर)"],
+            ["Day (Gün)", "Ends in 'ü' (Soft) -> add ler", "Günler (ग्युनलेर)"],
+            ["Book (Kitap)", "Last vowel 'a' (Hard) -> add lar", "Kitaplar (कितापलार)"]
         ]
     },
     {
         type: "table",
-        title: "8. Personal Pronouns",
+        title: "7b. Pluralization Practice List",
+        description: "More words to practice the sound.",
+        headers: ["English", "Hindi", "Turkish Plural"],
+        rows: [
+            ["Dogs", "कुत्ते", "Köpekler (क्योपेकलेर)"],
+            ["Cats", "बिल्लियाँ", "Kediler (केदिलेर)"],
+            ["Apples", "सेब", "Elmalar (एल्मालार)"],
+            ["Schools", "विद्यालय", "Okullar (ओकुल्लार)"],
+            ["Doctors", "डॉक्टर", "Doktorlar (दोकतोरलार)"]
+        ]
+    },
+    {
+        type: "table",
+        title: "8. Personal Pronouns (Subject)",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["I", "मैं", "Ben (बेन)"],
@@ -131,28 +144,41 @@ const syllabus = [
     },
     {
         type: "table",
-        title: "9. Possessive Pronouns (My, Your)",
-        description: "In Turkish, you add a suffix to the NOUN to show possession.",
-        headers: ["English", "Hindi", "Turkish Rule (Example: Ev - House)"],
+        title: "9a. Possessive Words (My, Your...)",
+        description: "First, learn the words for 'My', 'Your', etc.",
+        headers: ["English", "Hindi", "Turkish"],
         rows: [
-            ["My house", "मेरा घर", "Ev<b>im</b> (एविम)"],
-            ["Your house", "तुम्हारा घर", "Ev<b>in</b> (एविन)"],
-            ["His/Her house", "उसका घर", "Ev<b>i</b> (एवी)"],
-            ["Our house", "हमारा घर", "Ev<b>imiz</b> (एविमिज़)"],
-            ["Their house", "उनका घर", "Ev<b>leri</b> (एवलेरी)"]
+            ["My", "मेरा", "Benim (बेनिम)"],
+            ["Your (Singular)", "तुम्हारा", "Senin (सेनिन)"],
+            ["His / Her / Its", "उसका", "Onun (ओनुन)"],
+            ["Our", "हमारा", "Bizim (बिज़िम)"],
+            ["Your (Plural/Formal)", "आपका", "Sizin (सिज़िन)"],
+            ["Their", "उनका", "Onların (ओनलारिन)"]
+        ]
+    },
+    {
+        type: "table",
+        title: "9b. Possessive Suffixes (My House)",
+        description: "In Turkish, saying 'Benim' is not enough. You MUST add a suffix to the noun too.",
+        headers: ["English", "Hindi", "Turkish Rule (Noun + Suffix)"],
+        rows: [
+            ["My house", "मेरा घर", "Benim ev<b>im</b> (बेनिम एविम)"],
+            ["Your house", "तुम्हारा घर", "Senin ev<b>in</b> (सेनिन एविन)"],
+            ["His house", "उसका घर", "Onun ev<b>i</b> (ओनुन एवी)"],
+            ["Our house", "हमारा घर", "Bizim ev<b>imiz</b> (बिज़िम एविमिज़)"],
+            ["Their house", "उनका घर", "Onların ev<b>leri</b> (ओनलारिन एवलेरी)"]
         ]
     },
 
     // ==========================================
-    // PART 3: THE MASTER TENSE MATRIX (12 TENSES)
+    // PART 3: THE MASTER TENSE MATRIX
     // VERB: GELMEK (TO COME)
     // ==========================================
     {
         type: "theory",
-        title: "10. Theory: The 12 Tenses",
+        title: "10. Theory: The Master Verb List",
         content: `
-            <p>We will map all English/Hindi tenses to Turkish using one verb: <b>Gelmek (To Come)</b>.</p>
-            <p>Root word: <b>Gel</b></p>
+            <p>We will use <b>Gelmek (To Come)</b> to demonstrate all tenses.</p>
         `
     },
     {
@@ -335,8 +361,26 @@ const syllabus = [
         ]
     },
     {
+        type: "exercise",
+        title: "26. Exercise: Noun Cases",
+        questions: [
+            {
+                question: "Word: <b>Okul</b> (School). Say 'To School'.",
+                answer: "Okula (Okul + a)"
+            },
+            {
+                question: "Word: <b>İş</b> (Work). Say 'From Work'.",
+                answer: "İşten (İş + ten)"
+            },
+            {
+                question: "Word: <b>Araba</b> (Car). Say 'In the Car'.",
+                answer: "Arabada (Araba + da)"
+            }
+        ]
+    },
+    {
         type: "table",
-        title: "26. Question Particles",
+        title: "27. Question Particles",
         headers: ["Sentence", "Hindi", "Turkish (Mı/Mi/Mu/Mü)"],
         rows: [
             ["Are you coming?", "क्या तुम आ रहे हो?", "Geliyor <b>musun</b>? (गेलियोर मुसुन)"],
@@ -350,7 +394,7 @@ const syllabus = [
     // ==========================================
     {
         type: "table",
-        title: "27. Common Adjectives",
+        title: "28. Common Adjectives",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["Good / Bad", "अच्छा / बुरा", "İyi / Kötü (ई-ई / क्योत्यू)"],
@@ -363,7 +407,7 @@ const syllabus = [
     },
     {
         type: "table",
-        title: "28. Colors",
+        title: "29. Colors",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["Red", "लाल", "Kırmızı (किरमिज़ी)"],
@@ -376,7 +420,7 @@ const syllabus = [
     },
     {
         type: "table",
-        title: "29. Family Members",
+        title: "30. Family Members",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["Mother", "माँ", "Anne (अन्ने)"],
@@ -391,7 +435,7 @@ const syllabus = [
     },
     {
         type: "table",
-        title: "30. Body Parts",
+        title: "31. Body Parts",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["Head", "सिर", "Baş (बाश)"],
@@ -403,7 +447,7 @@ const syllabus = [
     },
     {
         type: "table",
-        title: "31. Common Foods",
+        title: "32. Common Foods",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["Bread", "रोटी", "Ekmek (एकमेक)"],
@@ -417,7 +461,7 @@ const syllabus = [
     },
     {
         type: "table",
-        title: "32. Professions",
+        title: "33. Professions",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["Doctor", "डॉक्टर", "Doktor (दोकतोर)"],
@@ -433,19 +477,43 @@ const syllabus = [
     // ==========================================
     {
         type: "table",
-        title: "33. Survival Phrases",
+        title: "34. Detailed Greetings",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
-            ["I don't understand", "मैं समझा नहीं", "Anlamıyorum (अनला-मियोरुम)"],
-            ["Do you speak English?", "क्या आप अंग्रेजी बोलते हैं?", "İngilizce biliyor musunuz? (इंगिलिज़्जे बिलियोर मुसुनुज़)"],
-            ["Where is the toilet?", "शौचालय कहाँ है?", "Tuvalet nerede? (तुवालेट नेरेदे)"],
-            ["How much is this?", "यह कितने का है?", "Ne kadar? (ने कदार)"],
-            ["Help!", "मदद!", "İmdat! (इम्दात)"]
+            ["Good Morning", "सुप्रभात", "Günaydın (ग्युनायदिन)"],
+            ["Good Afternoon", "शुभ दोपहर", "Tünaydın (तुनायदिन)"],
+            ["Good Evening", "शुभ संध्या", "İyi akşamlar (ई-ई अकशामलार)"],
+            ["Good Night", "शुभ रात्रि", "İyi geceler (ई-ई गेजेलेर)"],
+            ["Welcome", "स्वागत है", "Hoşgeldiniz (होशगेल्दिनिज़)"]
         ]
     },
     {
         type: "table",
-        title: "34. Introduction Conversation",
+        title: "35. Language Skills Phrases",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            ["I know English", "मैं अंग्रेजी जानता हूँ", "İngilizce biliyorum (इंगिलिज़्जे बिलियोरुम)"],
+            ["I know Turkish", "मैं तुर्की जानता हूँ", "Türkçe biliyorum (तुर्कचे बिलियोरुम)"],
+            ["I don't know English", "मैं अंग्रेजी नहीं जानता", "İngilizce bilmiyorum (इंगिलिज़्जे बिलमियोरुम)"],
+            ["I don't know Turkish", "मैं तुर्की नहीं जानता", "Türkçe bilmiyorum (तुर्कचे बिलमियोरुम)"],
+            ["Do you speak English?", "क्या आप अंग्रेजी बोलते हैं?", "İngilizce konuşuyor musunuz? (कोनुशुयोर मुसुनुज़)"]
+        ]
+    },
+    {
+        type: "table",
+        title: "36. Emotions & Actions",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            ["I love you", "मैं तुमसे प्यार करता हूँ", "Seni seviyorum (सेनी सेवियोरुम)"],
+            ["I hate you", "मैं तुमसे नफरत करता हूँ", "Senden nefret ediyorum (सेंडेन नेफ्रेत एदियोरुम)"],
+            ["I am sleeping", "मैं सो रहा हूँ", "Uyuyorum (उयुयोरुम)"],
+            ["I am hungry", "मुझे भूख लगी है", "Acıktım (अजिकतिम)"],
+            ["I am thirsty", "मुझे प्यास लगी है", "Susadım (सुसादिम)"]
+        ]
+    },
+    {
+        type: "table",
+        title: "37. Introduction Conversation",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["Hello, what is your name?", "नमस्ते, आपका नाम क्या है?", "Merhaba, adınız ne? (मेरहाबा, अदिनिज़ ने)"],
