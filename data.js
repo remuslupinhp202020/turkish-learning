@@ -360,6 +360,53 @@ const syllabus = [
             ["Genitive", "Of (House <b>ka</b>)", "Evin (एविन)"]
         ]
     },
+    // ==========================================
+    // INSERT THIS NEW SECTION AFTER SECTION 25
+    // ==========================================
+    {
+        type: "theory",
+        title: "25b. Theory: The Definite Article ('The')",
+        content: `
+            <p>Turkish has no word for "The". Instead, we change the ending of the object.</p>
+            <p><b>The Rule (4-way Harmony):</b></p>
+            <ul>
+                <li>If word ends in <b>e/i</b> → add <b>-i</b> (Peynir → Peynir<b>i</b>)</li>
+                <li>If word ends in <b>a/ı</b> → add <b>-ı</b> (Portakal → Portakal<b>ı</b>)</li>
+                <li>If word ends in <b>o/u</b> → add <b>-u</b> (Limon → Limon<b>u</b>)</li>
+                <li>If word ends in <b>ö/ü</b> → add <b>-ü</b> (Süt → Süt<b>ü</b>)</li>
+            </ul>
+            <p><b>Important Exceptions:</b></p>
+            <ul>
+                <li><b>Buffer 'Y':</b> If word ends in a vowel, add 'y' first. (Elma → Elma<b>yı</b>, Su → Su<b>yu</b>).</li>
+                <li><b>Softening (K → Ğ):</b> Words ending in K change to Ğ. (Balık → Balı<b>ğı</b>).</li>
+            </ul>
+        `
+    },
+    {
+        type: "table",
+        title: "25c. Practice: 'I eat THE...'",
+        description: "Subject + Object(with suffix) + Verb.",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            // Vowel Harmony: O/U -> U
+            ["She eats the lemon", "वह नींबू खाती है", "O limon<b>u</b> yer. (ओ लिमोनु येर)"],
+            // Vowel Harmony: E/I -> I
+            ["I eat the cheese", "मैं पनीर खाता हूँ", "Ben peynir<b>i</b> yerim. (बेन पेयनिरि येरिम)"],
+            ["You eat the meat", "तुम मांस खाते हो", "Sen et<b>i</b> yersin. (सेन एति येरसिन)"],
+            // Buffer 'Y' Rule (Elma ends in vowel)
+            ["You eat the apple", "तुम सेब खाते हो", "Sen elma<b>yı</b> yersin. (सेन एल्मा-यी येरसिन)"],
+            // Softening Rule (Balık ends in K -> Ğ)
+            ["We eat the fish", "हम मछली खाते हैं", "Biz balı<b>ğı</b> yeriz. (बिज़ बालाइ येरिज़)"],
+            // Buffer 'Y' + Harmony U
+            ["They drink the water", "वे पानी पीते हैं", "Onlar su<b>yu</b> içerler. (ओनलार सुयु इचेरलेर)"],
+            // Harmony Ö/Ü -> Ü
+            ["I drink the milk", "मैं दूध पीता हूँ", "Ben süt<b>ü</b> içerim. (बेन सुत्यु इचेरिम)"],
+            // Harmony A/I -> I
+            ["She eats the orange", "वह संतरा खाती है", "O portakal<b>ı</b> yer. (ओ पोर्तकाली येर)"],
+            // Softening Rule (Yağ implies 'oil', usually used with 'uses' but fits pattern)
+            ["I eat/consume the oil", "मैं तेल खाता हूँ", "Ben yağ<b>ı</b> yerim. (बेन या-ई येरिम)"]
+        ]
+    },
     {
         type: "exercise",
         title: "26. Exercise: Noun Cases",
