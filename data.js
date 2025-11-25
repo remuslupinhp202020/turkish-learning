@@ -1,137 +1,147 @@
-/* 
-    DATA FILE: TURKISH LEARNING SYLLABUS
-    Structure: English | Hindi | Turkish
-*/
-
 const syllabus = [
-    // --- PART 1: ALPHABET & BASICS ---
+    // --- SECTION: ALPHABET ---
     {
-        title: "1. Alphabet - Vowels (स्वर)",
-        description: "Turkish is phonetic. 'Ö' and 'Ü' are unique sounds not found in English but similar to German/French.",
-        headers: ["English Letter", "Hindi Sound", "Turkish Letter (Pronunciation)"],
+        type: "table",
+        title: "1. The Alphabet (Vowels)",
+        description: "Turkish uses Latin script (like English) but pronunciation is consistent (like Hindi).",
+        headers: ["Letter", "Hindi Sound", "Turkish Example"],
         rows: [
-            ["A", "आ", "A (आ)"],
-            ["E", "ए", "E (ए)"],
-            ["I (no dot)", "अ (dull)", "I (अ) - Guttural, back of throat"],
-            ["İ (dotted)", "ई", "İ (ई) - Like mach'i'ne"],
-            ["O", "ओ", "O (ओ)"],
-            ["Ö", "अ+ओ (mix)", "Ö (ओए) - Round lips tight"],
-            ["U", "ऊ", "U (ऊ)"],
-            ["Ü", "ई+ऊ (mix)", "Ü (उइ) - Pouted lips"]
-        ]
-    },
-    {
-        title: "2. Greetings (अभिवादन)",
-        description: "Basic words to start a conversation.",
-        headers: ["English", "Hindi", "Turkish"],
-        rows: [
-            ["Hello", "नमस्ते", "Merhaba (मेरहाबा)"],
-            ["Good Morning", "सुप्रभात", "Günaydın (ग्युनायदिन)"],
-            ["How are you?", "आप कैसे हैं?", "Nasılsın? (नासिल्सिन्न)"],
-            ["I am fine", "मैं ठीक हूँ", "İyiyim (ई-ई-इम)"],
-            ["Thank you", "धन्यवाद", "Teşekkürler (ते-शेक-कुर-लेर)"]
+            ["A", "आ", "Arkadaş (अरकादाश)"],
+            ["E", "ए", "Ekmek (एकमेक)"],
+            ["I (no dot)", "अ", "Ilık (अलिक) - *Throat sound*"],
+            ["İ (dotted)", "ई", "İyi (ई-ई)"],
+            ["Ö", "ओ+ए mix", "Öğrenci (ओरेंजी)"],
+            ["Ü", "उ+इ mix", "Üzüm (उइ-ज़ुम)"]
         ]
     },
 
-    // --- PART 2: GRAMMAR LOGIC ---
+    // --- SECTION: SENTENCE STRUCTURE THEORY ---
     {
-        title: "3. The Golden Rule: Vowel Harmony",
-        description: "<b>This is the most important rule in Turkish.</b><br> If the last vowel of a word is 'Hard' (a, ı, o, u), the suffix must be 'Hard'.<br> If the last vowel is 'Soft' (e, i, ö, ü), the suffix must be 'Soft'.",
-        headers: ["Vowel Type", "Hindi Equivalent Concept", "Example Words"],
-        rows: [
-            ["Hard Vowels (a, ı, o, u)", "भारी स्वर", "Araba (Car), Kapı (Door)"],
-            ["Soft Vowels (e, i, ö, ü)", "हल्के स्वर", "Ev (House), Kedi (Cat)"]
-        ]
-    },
-    {
-        title: "4. Plurals (Singular vs Plural)",
-        description: "Based on Vowel Harmony: Use <b>-lar</b> for Hard words, <b>-ler</b> for Soft words. Similar to Hindi changing sounds (Ladka -> Ladke).",
-        headers: ["English", "Hindi", "Turkish (Rule Applied)"],
-        rows: [
-            ["Cars", "गाड़ियाँ", "Arabalar (Araba + lar)"],
-            ["Books", "किताबें", "Kitaplar (Kitap + lar)"],
-            ["Houses", "घर (बहुवचन)", "Evler (Ev + ler)"],
-            ["Cats", "बिल्लियाँ", "Kediler (Kedi + ler)"]
-        ]
+        type: "theory",
+        title: "2. Theory: How to Build Sentences (Sentence Formation)",
+        content: `
+            <p>This is the most important part. Turkish sentence structure is almost identical to Hindi.</p>
+            <h3>The Golden Rule: SOV (Subject - Object - Verb)</h3>
+            <ul>
+                <li><strong>English (SVO):</strong> I (Subject) drink (Verb) tea (Object).</li>
+                <li><strong>Hindi (SOV):</strong> मैं (Subject) चाय (Object) पीता हूँ (Verb).</li>
+                <li><strong>Turkish (SOV):</strong> Ben (Subject) çay (Object) içiyorum (Verb).</li>
+            </ul>
+            <p><strong>Conclusion:</strong> Do not translate from English logic. Translate from Hindi logic. Put the verb at the very end.</p>
+        `
     },
 
-    // --- PART 3: PRONOUNS & VERB ALIGNMENT ---
+    // --- SECTION: VOCABULARY FOR SENTENCES ---
     {
-        title: "5. Personal Pronouns",
-        description: "Turkish pronouns are gender-neutral. 'O' means He, She, and It.",
+        type: "table",
+        title: "3. Vocabulary for Sentence Building",
+        description: "Memorize these basic words to build your first sentences.",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["I", "मैं", "Ben (बेन)"],
-            ["You", "तुम / आप", "Sen (सेन) / Siz (सिज़)"],
-            ["He / She / It", "वह", "O (ओ)"],
-            ["We", "हम", "Biz (बिज़)"],
-            ["They", "वे", "Onlar (ओनलार)"]
-        ]
-    },
-    {
-        title: "6. Subject-Verb Agreement (To be - Present)",
-        description: "How to say 'I am...', 'You are...'. In Hindi we say 'Main ... hoon'. In Turkish, we add a suffix to the adjective/noun.<br><b>Rule:</b> I (-im), You (-sin), We (-iz), They (-ler).",
-        headers: ["English Sentence", "Hindi Sentence", "Turkish Sentence"],
-        rows: [
-            ["I am a teacher", "मैं शिक्षक हूँ", "Ben öğretmenim (Ben öğretmen + im)"],
-            ["You are a teacher", "तुम शिक्षक हो", "Sen öğretmensin (Sen öğretmen + sin)"],
-            ["He is a teacher", "वह शिक्षक है", "O öğretmen (No suffix for He/She)"],
-            ["We are teachers", "हम शिक्षक हैं", "Biz öğretmeniz (Biz öğretmen + iz)"],
-            ["They are teachers", "वे शिक्षक हैं", "Onlar öğretmenler (Onlar öğretmen + ler)"]
+            ["You", "तुम", "Sen (सेन)"],
+            ["Bread", "रोटी", "Ekmek (एकमेक)"],
+            ["Water", "पानी", "Su (सू)"],
+            ["Tea", "चाय", "Çay (चाय)"],
+            ["Apple", "सेब", "Elma (एल्मा)"],
+            ["To Eat", "खाना", "Yemek (येमेक)"],
+            ["To Drink", "पीना", "İçmek (इचमेक)"],
+            ["To Want", "चाहना", "İstemek (इस्तेमेक)"]
         ]
     },
 
-    // --- PART 4: CASES (PREPOSITIONS) ---
+    // --- SECTION: GRAMMAR LOGIC (CONJUGATION) ---
     {
-        title: "7. Location & Direction (Cases)",
-        description: "Turkish uses suffixes where English uses Prepositions and Hindi uses Postpositions. It aligns perfectly with Hindi logic.<br><b>Locative:</b> -de/-da (In/At)<br><b>Dative:</b> -e/-a (To)<br><b>Ablative:</b> -den/-dan (From)",
-        headers: ["English (Preposition)", "Hindi (Postposition)", "Turkish (Suffix)"],
-        rows: [
-            ["In the house", "घर में (Ghar mein)", "Evde (Ev + de)"],
-            ["To the house", "घर को (Ghar ko)", "Eve (Ev + e)"],
-            ["From the house", "घर से (Ghar se)", "Evden (Ev + den)"],
-            ["At school", "स्कूल में", "Okulda (Okul + da)"],
-            ["To school", "स्कूल को", "Okula (Okul + a)"]
-        ]
+        type: "theory",
+        title: "4. Theory: Verb Conjugation (Present Continuous)",
+        content: `
+            <p>To say "I am doing something" (Raha hoon/Rahi hoon), Turkish uses the suffix <strong>-iyor</strong>.</p>
+            <p><strong>The Formula:</strong> [Verb Root] + [iyor] + [Person Suffix]</p>
+            <p><strong>Example: İçmek (To Drink)</strong> -> Root is 'İç'</p>
+            <ul>
+                <li><strong>Ben (I):</strong> İç + iyor + um = <strong>İçiyorum</strong> (Main pee raha hoon)</li>
+                <li><strong>Sen (You):</strong> İç + iyor + sun = <strong>İçiyorsun</strong> (Tum pee rahe ho)</li>
+                <li><strong>O (He/She):</strong> İç + iyor = <strong>İçiyor</strong> (Voh pee raha hai)</li>
+                <li><strong>Biz (We):</strong> İç + iyor + uz = <strong>İçiyoruz</strong> (Hum pee rahe hain)</li>
+            </ul>
+        `
     },
 
-    // --- PART 5: TENSES ---
+    // --- SECTION: FULL SENTENCE TABLE ---
     {
-        title: "8. Present Continuous Tense (Action Now)",
-        description: "Formula: Verb Stem + <b>iyor</b> + Person Suffix.<br>Equivalent to Hindi 'Raha hai'.<br>Example Verb: Gelmek (To come) -> Stem: Gel",
-        headers: ["English", "Hindi", "Turkish (Gel + iyor + suffix)"],
-        rows: [
-            ["I am coming", "मैं आ रहा हूँ", "Geliyorum (Gel-iyor-um)"],
-            ["You are coming", "तुम आ रहे हो", "Geliyorsun (Gel-iyor-sun)"],
-            ["He is coming", "वह आ रहा है", "Geliyor (Gel-iyor)"],
-            ["We are coming", "हम आ रहे हैं", "Geliyoruz (Gel-iyor-uz)"],
-            ["They are coming", "वे आ रहे हैं", "Geliyorlar (Gel-iyor-lar)"]
-        ]
-    },
-    {
-        title: "9. Common Verbs",
-        description: "Infinitive verbs in Turkish end in -mak or -mek (like Hindi verbs end in -na).",
+        type: "table",
+        title: "5. Practice Sentences (Present Tense)",
+        description: "Notice the order: Subject -> Object -> Verb",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
-            ["To Go", "जाना", "Gitmek (गितमेक)"],
-            ["To See", "देखना", "Görmek (ग्योर्मेक)"],
-            ["To Take", "लेना", "Almak (अलमक)"],
-            ["To Give", "देना", "Vermek (वेरमेक)"],
-            ["To Sleep", "सोना", "Uyumak (उयुमक)"]
+            ["I am drinking water.", "मैं पानी पी रहा हूँ।", "Ben su içiyorum. (बेन सू इचियोरुम)"],
+            ["You are eating bread.", "तुम रोटी खा रहे हो।", "Sen ekmek yiyorsun. (सेन एकमेक यियोरसून)"],
+            ["He is drinking tea.", "वह चाय पी रहा है।", "O çay içiyor. (ओ चाय इचियोर)"],
+            ["We want an apple.", "हम सेब चाहते हैं।", "Biz elma istiyoruz. (बिज़ एल्मा इस्तियोरुज़)"]
         ]
     },
 
-    // --- PART 6: VOCABULARY ---
+    // --- SECTION: EXERCISES ---
     {
-        title: "10. Family (परिवार)",
-        description: "Terms for family members.",
+        type: "exercise",
+        title: "6. Practice Exercises (Test Yourself)",
+        questions: [
+            {
+                question: "Translate to Turkish: <strong>I am eating.</strong> (Hint: Eat = Ye)",
+                answer: "Yiyorum (Ye + iyor + um)"
+            },
+            {
+                question: "Translate to Turkish: <strong>You are drinking tea.</strong> (Hint: Tea = Çay, Drink = İç)",
+                answer: "Çay içiyorsun."
+            },
+            {
+                question: "Translate to Turkish: <strong>We are coming.</strong> (Hint: Come = Gel)",
+                answer: "Geliyoruz."
+            },
+            {
+                question: "Identify the Subject, Object, and Verb in: <strong>Ben su istiyorum.</strong>",
+                answer: "Subject: Ben (I), Object: Su (Water), Verb: İstiyorum (Want)."
+            }
+        ]
+    },
+
+    // --- SECTION: VOCABULARY EXPANSION ---
+    {
+        type: "table",
+        title: "7. Expanded Vocabulary: Common Places",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
-            ["Mother", "माँ", "Anne (अन्ने)"],
-            ["Father", "पिता", "Baba (बाबा)"],
-            ["Older Brother", "बड़ा भाई", "Abi (अभी)"],
-            ["Older Sister", "बड़ी बहन", "Abla (अबला)"],
-            ["Younger Sibling", "छोटा भाई/बहन", "Kardeş (करदेश)"]
+            ["School", "विद्यालय", "Okul (ओकुल)"],
+            ["Home", "घर", "Ev (एव)"],
+            ["Work", "काम", "İş (इश)"],
+            ["Street", "सड़क", "Sokak (सोकाक)"],
+            ["Market", "बाज़ार", "Çarşı (चारशी)"]
+        ]
+    },
+
+    {
+        type: "theory",
+        title: "8. Theory: Direction (To/From)",
+        content: `
+            <p>How to say "To the school" or "From the house".</p>
+            <ul>
+                <li><strong>To (Dative Case):</strong> Add <strong>-e</strong> or <strong>-a</strong> at the end.</li>
+                <li>Examples: Ev (House) -> <strong>Eve</strong> (To house), Okul (School) -> <strong>Okula</strong> (To school).</li>
+                <br>
+                <li><strong>From (Ablative Case):</strong> Add <strong>-den</strong> or <strong>-dan</strong>.</li>
+                <li>Examples: Ev<strong>den</strong> (From house), Okul<strong>dan</strong> (From school).</li>
+            </ul>
+        `
+    },
+
+    {
+        type: "table",
+        title: "9. Sentences with Direction",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            ["I am going to school.", "मैं स्कूल जा रहा हूँ।", "Ben okula gidiyorum. (बेन ओकुला गिदियोरुम)"],
+            ["We are coming from home.", "हम घर से आ रहे हैं।", "Biz evden geliyoruz. (बिज़ एव्देन गेलियोरुज़)"],
+            ["He is going to work.", "वह काम पर जा रहा है।", "O işe gidiyor. (ओ इसे गिदियोर)"]
         ]
     }
 ];
