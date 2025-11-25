@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById('content-container');
 
     syllabus.forEach(section => {
-        // 1. Create the Section Card
+        // 1. Create the Section Card Container
         const sectionDiv = document.createElement('div');
         sectionDiv.className = 'section-card';
 
@@ -12,12 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
         title.innerText = section.title;
         sectionDiv.appendChild(title);
 
-        // 3. Create Table
+        // 3. Add Description (Explanation) if it exists
+        if (section.description) {
+            const desc = document.createElement('p');
+            desc.className = 'section-desc';
+            desc.innerHTML = section.description; // Allow innerHTML for bolding inside desc
+            sectionDiv.appendChild(desc);
+        }
+
+        // 4. Create Table
         const table = document.createElement('table');
         const thead = document.createElement('thead');
         const tbody = document.createElement('tbody');
 
-        // 4. Create Headers
+        // 5. Create Headers
         const headerRow = document.createElement('tr');
         section.headers.forEach(headerText => {
             const th = document.createElement('th');
@@ -26,24 +34,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         thead.appendChild(headerRow);
 
-        // 5. Create Data Rows
+        // 6. Create Data Rows
         section.rows.forEach(rowData => {
             const tr = document.createElement('tr');
             
-            // English Column
+            // English
             const tdEng = document.createElement('td');
             tdEng.innerText = rowData[0];
             tr.appendChild(tdEng);
 
-            // Hindi Column (Add specific class for styling)
+            // Hindi
             const tdHin = document.createElement('td');
             tdHin.innerText = rowData[1];
             tdHin.className = 'hindi-text';
             tr.appendChild(tdHin);
 
-            // Turkish Column (Add specific class for Hindi phonetics styling if needed)
+            // Turkish
             const tdTurk = document.createElement('td');
-            tdTurk.innerHTML = highlightPhonetic(rowData[2]);
+            // We use the helper function to make the (Hindi Pronunciation) bold/grey
+            tdTurk.innerHTML = formatTurkishCell(rowData[2]);
             tr.appendChild(tdTurk);
 
             tbody.appendChild(tr);
@@ -56,9 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Helper function to bold the Hindi pronunciation inside the parenthesis
-function highlightPhonetic(text) {
-    // If text contains parenthesis, wrap the part inside () with a span or bold tag
-    // This assumes format: "TurkishWord (HindiPronunciation)"
-    return text.replace(/\(([^)]+)\)/g, '<strong>($1)</strong>');
+// Helper: Formats "Word (Pronunciation)" -> "Word <br> <span class='phonetic'>(Pronunciation)</span>"
+function formatTurkishCell(text) {
+    if(text.includes("(")) {
+        // Splitting by first parenthesis to separate Word from Pronunciation
+        const parts = text.split('(');
+        const word = parts[0];
+        const pron = '(' + parts.slice(1).join('('); // Rejoin just in case there are multiple
+        return `${word} <br> <span class="phonetic">${pron}</span>`;
+    }
+    return text;
 }
