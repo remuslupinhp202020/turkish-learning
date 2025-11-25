@@ -521,5 +521,78 @@ const syllabus = [
             ["Nice to meet you.", "आपसे मिल कर खुशी हुई।", "Memnun oldum. (मेमनून ओल्दुम)"],
             ["See you later.", "बाद में मिलते हैं।", "Görüşürüz. (ग्यूरुशुरुज़)"]
         ]
+    },
+    // ==========================================
+    // PART 9: SEASONS, TIME & LOGIC WORDS
+    // ==========================================
+    {
+        type: "table",
+        title: "38. Seasons (Mousam)",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            ["Summer", "गर्मी", "Yaz (याज़)"],
+            ["Winter", "सर्दी", "Kış (किश)"],
+            ["Spring", "वसंत", "İlkbahar (इल्क-बहार)"],
+            ["Autumn/Fall", "पतझड़", "Sonbahar (सोन-बहार)"]
+        ]
+    },
+    {
+        type: "table",
+        title: "39. Directions & Location",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            ["Right", "दायां", "Sağ (साअ)"],
+            ["Left", "बायां", "Sol (सोल)"],
+            ["Straight", "सीधा", "Düz (द्यूज़)"],
+            ["Here", "यहाँ", "Burada (बुरादा)"],
+            ["There", "वहाँ", "Orada (ओरादा)"]
+        ]
+    },
+    {
+        type: "table",
+        title: "40. Telling Time",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            ["What time is it?", "समय क्या हुआ है?", "Saat kaç? (सात कच)"],
+            ["Hour / Clock", "घंटा / घड़ी", "Saat (सात)"],
+            ["Minute", "मिनट", "Dakika (दाकिका)"],
+            ["It is 3 o'clock", "तीन बजे हैं", "Saat üç. (सात उच)"],
+            ["It is 5 o'clock", "पाँच बजे हैं", "Saat beş. (सात बेश)"]
+        ]
+    },
+    {
+        type: "table",
+        title: "41. Connecting Words (Conjunctions)",
+        description: "Words to connect sentences.",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            ["And", "aur (और)", "Ve (वे)"],
+            ["But", "lekin (लेकिन)", "Ama (अमा)"],
+            ["Or", "ya (या)", "Veya (वेया)"],
+            ["Because", "kyunki (क्योंकि)", "Çünkü (चुनक्यू)"],
+            ["With", "saath (साथ)", "İle (इले)"]
+        ]
+    },
+
+    // ==========================================
+    // PART 10: FINAL CHALLENGE
+    // ==========================================
+    {
+        type: "exercise",
+        title: "42. Final Mixed Practice",
+        questions: [
+            {
+                question: "Translate: <b>I am coming because I love you.</b>",
+                answer: "Geliyorum çünkü seni seviyorum."
+            },
+            {
+                question: "Translate: <b>My house is here.</b> (Hint: House=Ev, My House=Evim)",
+                answer: "Evim burada."
+            },
+            {
+                question: "Translate: <b>I do not speak Turkish.</b> (Hint: Bilmek = To Know)",
+                answer: "Türkçe bilmiyorum."
+            }
+        ]
     }
 ];
