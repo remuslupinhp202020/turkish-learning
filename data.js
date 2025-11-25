@@ -407,6 +407,56 @@ const syllabus = [
             ["I eat/consume the oil", "मैं तेल खाता हूँ", "Ben yağ<b>ı</b> yerim. (बेन या-ई येरिम)"]
         ]
     },
+    // ==========================================
+    // INSERT THIS NEW SECTION AFTER SECTION 25c
+    // ==========================================
+    {
+        type: "theory",
+        title: "25d. Theory: 'This/That' & The Verb 'Okur'",
+        content: `
+            <p><b>1. Demonstratives (Pointing words):</b></p>
+            <ul>
+                <li><b>Bu:</b> This (Close)</li>
+                <li><b>Şu:</b> That (Mid-distance/Pointing)</li>
+                <li><b>O:</b> That (Far)</li>
+            </ul>
+            <p><b>2. The Verb 'Okumak' (To Read) - Simple Present (Aorist):</b></p>
+            <p>Root: <b>Oku</b>. Since it ends in a vowel, we add <b>-r</b> to make it "Reads" (Okur). Then we add the personal suffix.</p>
+            <ul>
+                <li>Ben Oku+r+um (I read)</li>
+                <li>Sen Oku+r+sun (You read)</li>
+                <li>O Oku+r (He/She reads)</li>
+                <li>Biz Oku+r+uz (We read)</li>
+                <li>Siz Oku+r+sunuz (You read)</li>
+                <li>Onlar Oku+r+lar (They read)</li>
+            </ul>
+            <p><i>Note: 'Kitap' becomes 'Kitabı' (p→b softening) when it is the specific object.</i></p>
+        `
+    },
+    {
+        type: "table",
+        title: "25e. Practice: Reading This & That",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
+            // I - This Book
+            ["I read this book", "मैं यह किताब पढ़ता हूँ", "Ben <b>bu</b> kitab<b>ı</b> okurum. (बेन बु किताबी ओकुरूम)"],
+            
+            // You - That Newspaper
+            ["You read that newspaper", "तुम वह अख़बार पढ़ते हो", "Sen <b>şu</b> gazeteyi okursun. (सेन शु गज़ेतेयी ओकुरसुन)"],
+            
+            // He - That Book (Far)
+            ["He reads that book", "वह वह किताब पढ़ता है", "O <b>o</b> kitab<b>ı</b> okur. (ओ ओ किताबी ओकुर)"],
+            
+            // We - These Books (Plural Object)
+            ["We read these books", "हम ये किताबें पढ़ते हैं", "Biz <b>bu</b> kitapları okuruz. (बिज़ बु किताप्लारी ओकुरूज़)"],
+            
+            // You (Formal) - Those Newspapers
+            ["You read those newspapers", "आप वे अख़बार पढ़ते हैं", "Siz <b>şu</b> gazeteleri okursunuz. (सिज़ शु गज़ेतेलेरि ओकुरसुनुज़)"],
+            
+            // They - Those Books
+            ["They read those books", "वे वे किताबें पढ़ते हैं", "Onlar <b>o</b> kitapları okurlar. (ओनलार ओ किताप्लारी ओकुरलार)"]
+        ]
+    },
     {
         type: "exercise",
         title: "26. Exercise: Noun Cases",
