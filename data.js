@@ -1,184 +1,137 @@
 /* 
     DATA FILE: TURKISH LEARNING SYLLABUS
-    Structure: English | Hindi | Turkish (with Hindi Pronunciation)
+    Structure: English | Hindi | Turkish
 */
 
 const syllabus = [
-    // --- SECTION 1: ALPHABET ---
+    // --- PART 1: ALPHABET & BASICS ---
     {
         title: "1. Alphabet - Vowels (स्वर)",
+        description: "Turkish is phonetic. 'Ö' and 'Ü' are unique sounds not found in English but similar to German/French.",
         headers: ["English Letter", "Hindi Sound", "Turkish Letter (Pronunciation)"],
         rows: [
-            ["A", "आ", "A (आ) - Like f'a'ther"],
-            ["E", "ए", "E (ए) - Like b'e'd"],
-            ["I (no dot)", "अ (dull)", "I (अ) - Guttural sound (Kap'a'li)"],
+            ["A", "आ", "A (आ)"],
+            ["E", "ए", "E (ए)"],
+            ["I (no dot)", "अ (dull)", "I (अ) - Guttural, back of throat"],
             ["İ (dotted)", "ई", "İ (ई) - Like mach'i'ne"],
-            ["O", "ओ", "O (ओ) - Like g'o'"],
-            ["Ö", "अ+ओ (mix)", "Ö (ओए) - Round mouth (German Ö)"],
-            ["U", "ऊ", "U (ऊ) - Like m'oo'n"],
-            ["Ü", "ई+ऊ (mix)", "Ü (उइ) - Pouted lips (French U)"]
+            ["O", "ओ", "O (ओ)"],
+            ["Ö", "अ+ओ (mix)", "Ö (ओए) - Round lips tight"],
+            ["U", "ऊ", "U (ऊ)"],
+            ["Ü", "ई+ऊ (mix)", "Ü (उइ) - Pouted lips"]
         ]
     },
     {
-        title: "2. Alphabet - Unique Consonants (व्यंजन)",
-        headers: ["English Letter", "Hindi Sound", "Turkish Letter (Pronunciation)"],
-        rows: [
-            ["C", "ज", "C (जे) - *Important: Sound is J*"],
-            ["Ç", "च", "Ç (चे) - Like 'Ch'air"],
-            ["Ğ", "Silent", "Ğ (युमुशाक गे) - Lengthens previous vowel"],
-            ["J", "झ़", "J (झे) - Soft J (Mea's'ure)"],
-            ["Ş", "श", "Ş (शे) - Like 'Sh'oe"],
-            ["Y", "य", "Y (ये) - Like 'Y'es"]
-        ]
-    },
-
-    // --- SECTION 2: BASICS ---
-    {
-        title: "3. Numbers (संख्याएँ)",
-        headers: ["Number", "Hindi", "Turkish"],
-        rows: [
-            ["One", "एक", "Bir (बिर)"],
-            ["Two", "दो", "İki (इकि)"],
-            ["Three", "तीन", "Üç (उच)"],
-            ["Four", "चार", "Dört (दूर्त)"],
-            ["Five", "पाँच", "Beş (बेश)"],
-            ["Six", "छह", "Altı (अल्त)"],
-            ["Seven", "सात", "Yedi (येदि)"],
-            ["Eight", "आठ", "Sekiz (सेकिज़)"],
-            ["Nine", "नौ", "Dokuz (दोकुज़)"],
-            ["Ten", "दस", "On (ओन)"]
-        ]
-    },
-    {
-        title: "4. Colors (रंग)",
+        title: "2. Greetings (अभिवादन)",
+        description: "Basic words to start a conversation.",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
-            ["Red", "लाल", "Kırmızı (किरमिज़ी)"],
-            ["White", "सफेद", "Beyaz (बेयाज़)"],
-            ["Black", "काला", "Siyah (सियाह)"],
-            ["Blue", "नीला", "Mavi (मावी)"],
-            ["Green", "हरा", "Yeşil (येशिल)"]
+            ["Hello", "नमस्ते", "Merhaba (मेरहाबा)"],
+            ["Good Morning", "सुप्रभात", "Günaydın (ग्युनायदिन)"],
+            ["How are you?", "आप कैसे हैं?", "Nasılsın? (नासिल्सिन्न)"],
+            ["I am fine", "मैं ठीक हूँ", "İyiyim (ई-ई-इम)"],
+            ["Thank you", "धन्यवाद", "Teşekkürler (ते-शेक-कुर-लेर)"]
         ]
     },
 
-    // --- SECTION 3: NOUNS & GENDER CONCEPT ---
+    // --- PART 2: GRAMMAR LOGIC ---
     {
-        title: "5. People & Gender Logic (लिंग)",
-        headers: ["English", "Hindi (Gendered)", "Turkish (Gender Neutral)"],
+        title: "3. The Golden Rule: Vowel Harmony",
+        description: "<b>This is the most important rule in Turkish.</b><br> If the last vowel of a word is 'Hard' (a, ı, o, u), the suffix must be 'Hard'.<br> If the last vowel is 'Soft' (e, i, ö, ü), the suffix must be 'Soft'.",
+        headers: ["Vowel Type", "Hindi Equivalent Concept", "Example Words"],
         rows: [
-            ["Man", "आदमी (Masculine)", "Adam (आदम)"],
-            ["Woman", "औरत (Feminine)", "Kadın (कादिन)"],
-            ["Boy", "लड़का (Masculine)", "Erkek çocuk (एर्केक चोजुक)"],
-            ["Girl", "लड़की (Feminine)", "Kız çocuk (किज़ चोजुक)"],
-            ["He / She / It", "वह (M) / वह (F) / यह", "O (ओ) - *Same for all*"],
-            ["Student", "छात्र / छात्रा", "Öğrenci (ओरेंजी) - *Unisex*"],
-            ["Teacher", "शिक्षक / शिक्षिका", "Öğretmen (ओरेतमेन) - *Unisex*"]
+            ["Hard Vowels (a, ı, o, u)", "भारी स्वर", "Araba (Car), Kapı (Door)"],
+            ["Soft Vowels (e, i, ö, ü)", "हल्के स्वर", "Ev (House), Kedi (Cat)"]
         ]
     },
-
-    // --- SECTION 4: ARTICLES ---
     {
-        title: "6. Articles (A, An, The)",
-        headers: ["English Concept", "Hindi Equivalent", "Turkish Rule"],
+        title: "4. Plurals (Singular vs Plural)",
+        description: "Based on Vowel Harmony: Use <b>-lar</b> for Hard words, <b>-ler</b> for Soft words. Similar to Hindi changing sounds (Ladka -> Ladke).",
+        headers: ["English", "Hindi", "Turkish (Rule Applied)"],
         rows: [
-            ["A / An (Indefinite)", "एक (Ek)", "Bir (बिर) - e.g. Bir elma (An apple)"],
-            ["The (Definite)", "कोई शब्द नहीं (No word)", "*No separate word*. Explained by suffixes."],
-            ["The Book (Specific)", "वह किताब", "Kitab-ı (किताबी) - Suffix indicates 'The'"],
-            ["A Book (General)", "एक किताब", "Bir kitap (बिर किताप)"]
+            ["Cars", "गाड़ियाँ", "Arabalar (Araba + lar)"],
+            ["Books", "किताबें", "Kitaplar (Kitap + lar)"],
+            ["Houses", "घर (बहुवचन)", "Evler (Ev + ler)"],
+            ["Cats", "बिल्लियाँ", "Kediler (Kedi + ler)"]
         ]
     },
 
-    // --- SECTION 5: PRONOUNS & VERBS ---
+    // --- PART 3: PRONOUNS & VERB ALIGNMENT ---
     {
-        title: "7. Pronouns (सर्वनाम)",
+        title: "5. Personal Pronouns",
+        description: "Turkish pronouns are gender-neutral. 'O' means He, She, and It.",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
             ["I", "मैं", "Ben (बेन)"],
-            ["You (Singular)", "तुम / आप", "Sen (सेन) / Siz (सिज़ - Formal)"],
-            ["He / She", "वह", "O (ओ)"],
+            ["You", "तुम / आप", "Sen (सेन) / Siz (सिज़)"],
+            ["He / She / It", "वह", "O (ओ)"],
             ["We", "हम", "Biz (बिज़)"],
             ["They", "वे", "Onlar (ओनलार)"]
         ]
     },
     {
-        title: "8. Common Verbs (Infinitive Form)",
-        headers: ["English", "Hindi (na ends)", "Turkish (mak/mek ends)"],
+        title: "6. Subject-Verb Agreement (To be - Present)",
+        description: "How to say 'I am...', 'You are...'. In Hindi we say 'Main ... hoon'. In Turkish, we add a suffix to the adjective/noun.<br><b>Rule:</b> I (-im), You (-sin), We (-iz), They (-ler).",
+        headers: ["English Sentence", "Hindi Sentence", "Turkish Sentence"],
         rows: [
-            ["To Come", "आना", "Gelmek (गेलमेक)"],
+            ["I am a teacher", "मैं शिक्षक हूँ", "Ben öğretmenim (Ben öğretmen + im)"],
+            ["You are a teacher", "तुम शिक्षक हो", "Sen öğretmensin (Sen öğretmen + sin)"],
+            ["He is a teacher", "वह शिक्षक है", "O öğretmen (No suffix for He/She)"],
+            ["We are teachers", "हम शिक्षक हैं", "Biz öğretmeniz (Biz öğretmen + iz)"],
+            ["They are teachers", "वे शिक्षक हैं", "Onlar öğretmenler (Onlar öğretmen + ler)"]
+        ]
+    },
+
+    // --- PART 4: CASES (PREPOSITIONS) ---
+    {
+        title: "7. Location & Direction (Cases)",
+        description: "Turkish uses suffixes where English uses Prepositions and Hindi uses Postpositions. It aligns perfectly with Hindi logic.<br><b>Locative:</b> -de/-da (In/At)<br><b>Dative:</b> -e/-a (To)<br><b>Ablative:</b> -den/-dan (From)",
+        headers: ["English (Preposition)", "Hindi (Postposition)", "Turkish (Suffix)"],
+        rows: [
+            ["In the house", "घर में (Ghar mein)", "Evde (Ev + de)"],
+            ["To the house", "घर को (Ghar ko)", "Eve (Ev + e)"],
+            ["From the house", "घर से (Ghar se)", "Evden (Ev + den)"],
+            ["At school", "स्कूल में", "Okulda (Okul + da)"],
+            ["To school", "स्कूल को", "Okula (Okul + a)"]
+        ]
+    },
+
+    // --- PART 5: TENSES ---
+    {
+        title: "8. Present Continuous Tense (Action Now)",
+        description: "Formula: Verb Stem + <b>iyor</b> + Person Suffix.<br>Equivalent to Hindi 'Raha hai'.<br>Example Verb: Gelmek (To come) -> Stem: Gel",
+        headers: ["English", "Hindi", "Turkish (Gel + iyor + suffix)"],
+        rows: [
+            ["I am coming", "मैं आ रहा हूँ", "Geliyorum (Gel-iyor-um)"],
+            ["You are coming", "तुम आ रहे हो", "Geliyorsun (Gel-iyor-sun)"],
+            ["He is coming", "वह आ रहा है", "Geliyor (Gel-iyor)"],
+            ["We are coming", "हम आ रहे हैं", "Geliyoruz (Gel-iyor-uz)"],
+            ["They are coming", "वे आ रहे हैं", "Geliyorlar (Gel-iyor-lar)"]
+        ]
+    },
+    {
+        title: "9. Common Verbs",
+        description: "Infinitive verbs in Turkish end in -mak or -mek (like Hindi verbs end in -na).",
+        headers: ["English", "Hindi", "Turkish"],
+        rows: [
             ["To Go", "जाना", "Gitmek (गितमेक)"],
-            ["To Eat", "खाना", "Yemek (येमेक)"],
-            ["To Drink", "पीना", "İçmek (इचमेक)"],
-            ["To Speak", "बोलना", "Konuşmak (कोनुश्मक)"],
-            ["To Want", "चाहना", "İstemek (इस्तेमेक)"],
-            ["To Understand", "समझना", "Anlamak (अनलामक)"]
+            ["To See", "देखना", "Görmek (ग्योर्मेक)"],
+            ["To Take", "लेना", "Almak (अलमक)"],
+            ["To Give", "देना", "Vermek (वेरमेक)"],
+            ["To Sleep", "सोना", "Uyumak (उयुमक)"]
         ]
     },
 
-    // --- SECTION 6: TENSES (COMPARATIVE) ---
+    // --- PART 6: VOCABULARY ---
     {
-        title: "9. Present Continuous Tense (Currently doing)",
-        headers: ["English", "Hindi (Raha hai)", "Turkish (-(i)yor)"],
-        rows: [
-            ["I am coming", "मैं आ रहा हूँ", "Geliyorum (गेल-इयोर-उम)"],
-            ["You are going", "तुम जा रहे हो", "Gidiyorsun (गिद-इयोर-सुन)"],
-            ["He is eating", "वह खा रहा है", "Yiyor (यि-योर)"],
-            ["We are speaking", "हम बोल रहे हैं", "Konuşuyoruz (कोनुश-उयोर-उज़)"],
-            ["They are drinking", "वे पी रहे हैं", "İçiyorlar (इच-इयोर-लार)"]
-        ]
-    },
-    {
-        title: "10. Simple Present / Aorist (Habits)",
-        headers: ["English", "Hindi (Ta hai)", "Turkish (-(e/a)r)"],
-        rows: [
-            ["I drink tea", "मैं चाय पीता हूँ", "Çay içerim (चाय इचेरिम)"],
-            ["We go to school", "हम स्कूल जाते हैं", "Okula gideriz (ओकुला गिदेरिज़)"],
-            ["He works", "वह काम करता है", "Çalışır (चालिशिर)"]
-        ]
-    },
-    {
-        title: "11. Past Tense (Completed)",
-        headers: ["English", "Hindi (Ya/Yi/Ye)", "Turkish (-di/-du)"],
-        rows: [
-            ["I came", "मैं आया", "Geldim (गेल्दिम)"],
-            ["You saw", "तुमने देखा", "Gördün (ग्युर्द्युन)"],
-            ["He went", "वह गया", "Gitti (गित्ति)"]
-        ]
-    },
-    {
-        title: "12. Future Tense",
-        headers: ["English", "Hindi (Ga/Gi/Ge)", "Turkish (-ecek/-acak)"],
-        rows: [
-            ["I will go", "मैं जाऊँगा", "Gideceğim (गिदेजेइम)"],
-            ["We will come", "हम आएंगे", "Geleceğiz (गेलेजेइज़)"],
-            ["Wait!", "रुको!", "Bekle! (बेक्ले)"]
-        ]
-    },
-
-    // --- SECTION 7: ADJECTIVES ---
-    {
-        title: "13. Common Adjectives (विशेषण)",
+        title: "10. Family (परिवार)",
+        description: "Terms for family members.",
         headers: ["English", "Hindi", "Turkish"],
         rows: [
-            ["Good", "अच्छा", "İyi (ई-ई)"],
-            ["Bad", "बुरा", "Kötü (क्योत्यू)"],
-            ["Beautiful", "सुंदर", "Güzel (ग्यूज़ेल)"],
-            ["Big", "बड़ा", "Büyük (ब्यूक)"],
-            ["Small", "छोटा", "Küçük (क्युचुक)"],
-            ["Hot", "गर्म", "Sıcak (सिजाक)"],
-            ["Cold", "ठंडा", "Soğuk (सोउक)"]
-        ]
-    },
-
-    // --- SECTION 8: COMMON SENTENCES ---
-    {
-        title: "14. Daily Sentences",
-        headers: ["English", "Hindi", "Turkish"],
-        rows: [
-            ["My name is...", "मेरा नाम ... है", "Benim adım... (बेनिम अदिम...)"],
-            ["Where are you from?", "आप कहाँ से हैं?", "Nerelisiniz? (नेरे-लिसिनिज़)"],
-            ["I don't understand.", "मैं समझा नहीं", "Anlamıyorum. (अनला-मियोरुम)"],
-            ["Where is the toilet?", "शौचालय कहाँ है?", "Tuvalet nerede? (तुवालेट नेरेदे)"],
-            ["I love you.", "मैं तुमसे प्यार करता हूँ", "Seni seviyorum. (सेनी सेवियोरुम)"]
+            ["Mother", "माँ", "Anne (अन्ने)"],
+            ["Father", "पिता", "Baba (बाबा)"],
+            ["Older Brother", "बड़ा भाई", "Abi (अभी)"],
+            ["Older Sister", "बड़ी बहन", "Abla (अबला)"],
+            ["Younger Sibling", "छोटा भाई/बहन", "Kardeş (करदेश)"]
         ]
     }
 ];
